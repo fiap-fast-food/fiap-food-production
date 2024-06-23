@@ -1,8 +1,8 @@
 package com.fiapfoodproduction.product.service;
 
-import com.fiap.food.api.product.dto.ProductRequest;
-import com.fiap.food.core.exception.NotFoundException;
-import com.fiap.food.core.model.ProductEntity;
+import com.fiapfoodproduction.core.exception.NotFoundException;
+import com.fiapfoodproduction.core.model.ProductEntity;
+import com.fiapfoodproduction.product.dto.ProductRequest;
 
 import java.util.List;
 

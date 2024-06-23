@@ -1,12 +1,12 @@
 package com.fiapfoodproduction.product.service;
 
-import com.fiap.food.api.assembler.CategoryMapper;
-import com.fiap.food.api.assembler.ProductMapper;
-import com.fiap.food.api.category.service.CategoryService;
-import com.fiap.food.api.product.dto.ProductRequest;
-import com.fiap.food.core.exception.NotFoundException;
-import com.fiap.food.core.model.ProductEntity;
-import com.fiap.food.core.repository.ProductRepository;
+import com.fiapfoodproduction.assembler.CategoryMapper;
+import com.fiapfoodproduction.assembler.ProductMapper;
+import com.fiapfoodproduction.category.service.CategoryService;
+import com.fiapfoodproduction.core.exception.NotFoundException;
+import com.fiapfoodproduction.core.model.ProductEntity;
+import com.fiapfoodproduction.core.repository.ProductRepository;
+import com.fiapfoodproduction.product.dto.ProductRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

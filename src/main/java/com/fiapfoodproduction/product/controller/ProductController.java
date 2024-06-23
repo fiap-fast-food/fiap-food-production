@@ -1,13 +1,13 @@
 package com.fiapfoodproduction.product.controller;
 
-import com.fiap.food.api.assembler.CategoryMapper;
-import com.fiap.food.api.assembler.ProductMapper;
-import com.fiap.food.api.category.dto.CategoryRequest;
-import com.fiap.food.api.product.dto.ProductRequest;
-import com.fiap.food.api.product.dto.ProductResponse;
-import com.fiap.food.api.product.service.ProductService;
-import com.fiap.food.core.exception.NotFoundException;
-import com.fiap.food.core.model.ProductEntity;
+import com.fiapfoodproduction.assembler.CategoryMapper;
+import com.fiapfoodproduction.assembler.ProductMapper;
+import com.fiapfoodproduction.category.dto.CategoryRequest;
+import com.fiapfoodproduction.core.exception.NotFoundException;
+import com.fiapfoodproduction.core.model.ProductEntity;
+import com.fiapfoodproduction.product.dto.ProductRequest;
+import com.fiapfoodproduction.product.dto.ProductResponse;
+import com.fiapfoodproduction.product.service.ProductService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
@@ -43,7 +43,7 @@ public class ProductController {
             @ApiResponse(responseCode = "409", description = "conflict operation"),
     })
     @PostMapping()
-    public ResponseEntity<Void> insert(@Valid @RequestBody ProductRequest productRequest) throws NotFoundException {
+    public ResponseEntity<Void> insert(@RequestBody ProductRequest productRequest) throws NotFoundException {
         var product = productMapper.toEntity(productRequest);
         var category = new CategoryRequest();
         category.setName(productRequest.getNameCategory());
@@ -51,7 +51,6 @@ public class ProductController {
         productService.insert(productMapper.toRequest(product));
         return ResponseEntity.ok().build();
     }
-
 
     @Operation(
             summary = "Search Product",

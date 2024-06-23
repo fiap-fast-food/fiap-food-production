@@ -1,6 +1,6 @@
 package com.fiapfoodproduction.product.dto;
 
-import com.fiap.food.api.category.dto.CategoryResponse;
+import com.fiapfoodproduction.category.dto.CategoryResponse;
 import lombok.Data;
 
 @Data
